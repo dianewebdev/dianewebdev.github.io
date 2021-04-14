@@ -25,16 +25,15 @@
 
 <body>
   <!-- Internal Syle Sheet -->
-  <style type="text/css"> 
-    #mainNav {
-      position: fixed;
-      top: 0;
+  <style> 
+    .overlay {
+      margin: 0;
     }
 
     .btn {
       color: #FFFFFF;
       background-color: #212529; 
-      border-color: white;
+      margin: 16px 0;
     }
 
     .btn:focus {
@@ -45,25 +44,34 @@
 
     .btn:hover {
       color: #212529 !important;
-      background-color: violet !important;
-      border-color: violet !important;
+      background-color: #FFFFFFE6 !important;
+      border-color: lightsteelblue !important;
       box-shadow: 5px 5px 5px #212529;
     }
 
-    .col-sm-4 {
+    button {
+      transition: transform .2s;
+    }
+
+    button:hover {
+      box-shadow: 5px 5px 5px #212529;
+      transform: scale(1.10);
+    }
+
+    .col-sm-5 {
       text-align: center;
       padding: 40px;
       margin: 0 auto;
       transition: transform .2s;
     }
 
-    .col-sm-4:hover {
-      transform: scale(1.25);
+    .content { 
+      background-color: lightsteelblue;
     }
 
     .copyright {
-      color: #FFFFFF !important;
-      text-shadow: 2px 2px 2px #212529;
+      color: #212529 !important;
+      text-shadow: 2px 2px 2px #FFF;
       letter-spacing:1px; 
     }
 
@@ -72,42 +80,51 @@
       font-weight:800; 
       letter-spacing:1px; 
       text-transform:uppercase;
-      background-image: linear-gradient(#FFF, violet);
+      background-image: linear-gradient(#FFF, lightsteelblue);
+    }
+
+    .fa-bars:hover {
+      background-color: lightsteelblue;
     }
 
     .fab:hover {
       color: #212529;
-      background-color: violet;
-      border-radius: 25%;
+      background-color: #FFFFFF;
       box-shadow: 2px 2px 2px #212529;
     }
 
     .fas:hover {
       color: #212529;
-      background-color: violet;
-      border-radius: 25%;
+      background-color: #FFFFFF;
       box-shadow: 2px 2px 2px #212529;
     }
 
-    .img-fluid {
-      width: 350px;
-      height: auto;
-      border: solid black 4px;
-      display: block;
-      margin: 50px auto;
-      box-shadow: 0 0 30px #E6E6FA, 0 0 34px #212529;
+    footer {
+      background-image: linear-gradient(lightsteelblue, #FFF); 
     }
 
     .masthead {
       width: 100%;
     }
 
-    .nav-link {
-      padding: 10px 25px !important;
+    #mainNav {
+      position: fixed;
+      top: 0;
     }
 
-    .navbar-toggler:focus {
+    #myBtn:hover {
+      color: #FFFFFF !important;
+      background-color: #212529 !important;
+      box-shadow: 0px 0px 0px;
+    }
+
+    .nav-link {
+      padding: 10px 20px !important;
+    }
+
+    .navbar-toggler:focus, .navbar-toggler:hover {
       outline: #212529;
+      background-color: lightsteelblue;
     }
 
     .navbar a {
@@ -120,7 +137,7 @@
 
     .rounded {
       width: 100%;
-      height: auto; 
+      height: 200px; 
       margin: 20px;
       box-shadow: 5px 10px 18px #212529;
     }
@@ -129,25 +146,6 @@
       border: 0;
       height: 1px;
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-    }
-
-    a+nav:hover {
-      color: violet !important;
-    }
-
-    button {
-      transition: transform .2s;
-    }
-
-    button:hover {
-      box-shadow: 5px 5px 5px #212529;
-      transform: scale(1.10);
-    }
-
-    footer {
-      background-image: linear-gradient(#FFF, violet); 
-      margin-top: 16px;
-      border: solid #FFFFFF 2px;
     }
   </style>
 
@@ -168,15 +166,10 @@
             <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="dropdown nav-item">
-            <a class="dropdown-toggle nav-link" href="index.html" data-toggle="dropdown">Projects
-              <b class="caret"></b></a>
+            <a class="dropdown-toggle nav-link" href="index.html" data-toggle="dropdown">Projects<b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <a class="dropdown-toggle nav-link" href="index.html" data-toggle="dropdown">Mini Projects<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <a class="nav-link" href="project1.html">YouTube Homepage Mockup</a>
-                  <a class="nav-link" href="project2.html">Previous Portfolio Website</a>
-                  <a class="nav-link" href="projectlast.html">Template Changes</a>
-                </ul>
+                <a class="nav-link" href="index.html#mini-projects">Mini Projects</a>
+                <a class="nav-link" href="index.html#work-projects">Work Projects</a>
               </ul>
           </li>
           <li class="nav-item">
@@ -188,7 +181,8 @@
   </nav>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('img/about-bg.jpeg')">
+  <div class="content">
+  <header class="masthead" style="background-image: url('img/sci_screenshot.png')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
@@ -204,37 +198,139 @@
 
   <!-- Main Content -->
   <div class="container">
-    <img class="img-fluid" src="img/Self-Portrait.png" alt="Self Portrait">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        <span class="caption text-muted"> ... <a href="www.linkedin.com/in/diane-akasike" target="_blank"></a></span>
-        <br>
-        <br>
-        <h2 class="post-title">
+    <img class="img-fluid" src="img/Self-Portrait.png" alt="Self Portrait" style="width: 200px; height: auto; border: solid #FFFFFFE6 4px; float: left; margin: 0 65px 65px 0;">
+    <h2 class="post-title">
           Loving What I Do 😊
         </h2>
-        <p>I am a self-motivated and passionate entry-level web developer and designer. I have 2+ years of experience in the Information Technology sector, where I studied software development in the undergraduate level. I am an effective communicator and am able to align individual objectives to achieve project goals. I'm interested in harnessing previous programming experience to develop emerging skills in web development and design. I desire to drive innovation within a diverse and dynamic workplace.</p>
-        <h2 class="post-title">
-          How to Contact Me 📲
-        </h2>
-        <p>LinkedIn<br>
-        Email</p>
-        <!-- <pre> EDUCATION & CERTIFICATIONS
-Bachelor of Arts in Information Technology, Rutgers University, New Brunswick, NJ (GPA: 3.4)                Sep 2017 – May 2021                                  CompTIA ITF+ (Information Technology Fundamentals) Certification                                                                                                               Oct 2020                                                                                                                                                                   
-
-TECHNICAL & SOFTWARE SKILLS 
-
-✔ Object-Oriented Programming ✔ HTML/CSS  ✔ Software Development
-✔ Python  ✔ Windows PC  ✔ Communication
-✔ Java  ✔ Linux OS  ✔ Website Maintenance</pre> -->
-      </div>
-    </div>
+        <p style="text-align: justify;">I am a self-motivated and passionate entry-level web developer and designer. I have 2+ years of experience in the Information Technology sector, where I studied software development in the undergraduate level. I am an effective communicator and am able to align individual objectives to achieve project goals. I'm interested in harnessing previous programming experience to develop emerging skills in web development and design. I desire to drive innovation within a diverse and dynamic workplace.</p>
+        <br>
+        <button class="accordion">Education &amp; Certifications<i class="arrow"></i></button>
+        <div class="panel">
+          <ul>
+            <li><p><b>Bachelor of Arts Degree in Information Technology, Rutgers University</b></p> 
+            <p>New Brunswick, NJ (GPA: 3.4)</p>
+            <p>Sep 2017 – May 2021</p></li>
+            <li><p><b>CompTIA ITF+ (Information Technology Fundamentals) Certification</b></p>
+            <p>Oct 2020</p></li>
+          </ul>
+        </div>
+        <button class="accordion">Basic Technical Skills<i class="arrow"></i></button>
+        <div class="panel">
+          <ul style="list-style: none; padding: 40px;">
+            <li>✔ &nbsp;Object-Oriented Programming</li>
+            <li>✔ &nbsp;Python 3</li>
+            <li>✔ &nbsp;Java</li>
+            <li>✔ &nbsp;Web Design</li>  
+            <li>✔ &nbsp;Hypertext Markup Language (HTML5)</li>
+            <li>✔ &nbsp;Cascading Style Sheets (CSS)</li>
+            <li>✔ &nbsp;Website Development/Maintenance</li>  
+            <li>✔ &nbsp;Agile Software Development</li>  
+            <li>✔ &nbsp;Communication</li>
+          </ul>
+        </div>
+        <button class="accordion">Technical Experience &amp; Training<i class="arrow"></i></button>
+        <div class="panel" style="padding: 40px">
+          <div>
+            <h4>Website Technician</h4>
+            <h4>Rutgers School of Arts and Sciences (SAS) Dean's Office - Computer Operations: New Brunswick, NJ</h4>
+            <p><b>Sep 2020 – Present</b></p>
+            <p>Manage and maintain 100+ Rutgers SAS websites using Joomla Content Management System by working closely with a small team of web developers to increase the number of hits to the websites and generate revenue for SAS IT Web services</p>
+          </div>
+          <hr style="padding: 20px 0">
+          <div>
+            <h4>Web Developer</h4>
+            <h4>Bridgeport Youth Lacrosse (BYL): Bridgeport, CT</h4>
+            <p><b>Feb 2021 – Apr 2021</b></p>
+            <p>Reconstructed current, incomplete website by creating the design and layout of 10+ web pages and updating or removing outdated information from existing content to meet client needs</p>
+          </div>
+        </div>
+        <button class="accordion">Relevant Projects<i class="arrow"></i></button>
+        <div class="panel" style="padding: 40px">
+          <ul>
+            <h4>Introduction to Computer Concepts</h4>
+            <p><b>Semester: Fall 2019</b></p>
+            <li>Course: Gained an understanding of basic mathematical-theoretical principles that govern the functioning of computers and the role of creative thinking and problem solving in building software applications</li>
+            <li>Final Project: Collaborated with a group of five team members and used Java programming language to develop a conceptual solution to a designed problem</li>
+            <hr style="padding: 20px 0">
+            <h4>Object-Oriented Programming</h4>
+            <p><b>Semester: Spring 2020</b></p>
+            <li>Course: Introduced to principles of object-oriented analysis, design and programming and discovered interactive capabilities of 3rd-party public application programming interfaces</li>
+            <li>Final Project: Utilized Python 3 programming language to extract data from Twitter’s API in order to focus on developing creative thinking for analyzing a problem domain and designing a solution to resolve it</li>
+            <hr style="padding: 20px 0">
+            <h4>Web Design</h4>
+            <p><b>Semester: Spring 2020</b></p>
+            <li>Course: Studied the implications of web design in meeting organizational and client needs, and how to transform client requirements from sketch to wireframe to high-fidelity prototype</li>
+            <li>Final Project: Built a basic online portfolio for myself using HTML5 and CSS to apply basic principles and techniques of web design</li>
+            <hr style="padding: 20px 0">
+            <h4>Independent Study</h4>
+            <p><b>Semester: Spring 2021</b></p>
+            <li>Course: Design, negotiate and manage my own program of study based on my existing experience and knowledge as well as my long-term intentions</li>
+            <li>Final Project: Create a professional portfolio website using Bootstrap Templates with HTML5, CSS, and JavaScript to showcase the relevant work I have completed in previous ITI courses, jobs, and outside training</li>
+          </ul>
+        </div>
   </div>
-  <hr>
+  <style>
+    .accordion {
+      background-color: #EEE;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      transition: 0.4s;
+    }
+
+    .accordion:focus {
+      outline: #212529;
+    }
+
+    .active, .accordion:hover {
+      background-color: #5D8AA8;
+    }
+
+    .arrow {
+      border: solid black;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      float: right;
+      padding: 3px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+    }
+
+    .panel {
+      padding: 0 18px;
+      background-color: #CCC;
+      display: none;
+      overflow: hidden;
+    }
+  </style>
+  
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+    }
+  </script>
+  <br><br>
 
   <!-- Pager -->
   <div class="clearfix">
-    <a class="btn float-right" href="project1.html">Take A Look At My First Project &rarr;</a>
+    <a class="btn float-right" href="contact.html">Contact Me &rarr;</a>
+  </div>
   </div>
      
   <!-- Footer -->

@@ -25,16 +25,15 @@
 
 <body>
   <!-- Internal Syle Sheet -->
-  <style type="text/css"> 
-    #mainNav {
-      position: fixed;
-      top: 0;
+  <style> 
+    .overlay {
+      margin: 0;
     }
 
     .btn {
       color: #FFFFFF;
       background-color: #212529; 
-      border-color: white;
+      margin: 16px 0;
     }
 
     .btn:focus {
@@ -45,25 +44,34 @@
 
     .btn:hover {
       color: #212529 !important;
-      background-color: coral !important;
-      border-color: coral !important;
+      background-color: #FFFFFFE6 !important;
+      border-color: lightsteelblue !important;
       box-shadow: 5px 5px 5px #212529;
     }
 
-    .col-sm-4 {
+    button {
+      transition: transform .2s;
+    }
+
+    button:hover {
+      box-shadow: 5px 5px 5px #212529;
+      transform: scale(1.10);
+    }
+
+    .col-sm-5 {
       text-align: center;
       padding: 40px;
       margin: 0 auto;
       transition: transform .2s;
     }
 
-    .col-sm-4:hover {
-      transform: scale(1.25);
+    .content { 
+      background-color: lightsteelblue;
     }
 
     .copyright {
-      color: #FFFFFF !important;
-      text-shadow: 2px 2px 2px #212529;
+      color: #212529 !important;
+      text-shadow: 2px 2px 2px #FFF;
       letter-spacing:1px; 
     }
 
@@ -72,33 +80,51 @@
       font-weight:800; 
       letter-spacing:1px; 
       text-transform:uppercase;
-      background-image: linear-gradient(#FFF, coral);
+      background-image: linear-gradient(#FFF, lightsteelblue);
+    }
+
+    .fa-bars:hover {
+      background-color: lightsteelblue;
     }
 
     .fab:hover {
       color: #212529;
-      background-color: coral;
-      border-radius: 25%;
+      background-color: #FFFFFF;
       box-shadow: 2px 2px 2px #212529;
     }
 
     .fas:hover {
       color: #212529;
-      background-color: coral;
-      border-radius: 25%;
+      background-color: #FFFFFF;
       box-shadow: 2px 2px 2px #212529;
+    }
+
+    footer {
+      background-image: linear-gradient(lightsteelblue, #FFF); 
     }
 
     .masthead {
       width: 100%;
     }
 
-    .nav-link {
-      padding: 10px 25px !important;
+    #mainNav {
+      position: fixed;
+      top: 0;
     }
 
-    .navbar-toggler:focus {
+    #myBtn:hover {
+      color: #FFFFFF !important;
+      background-color: #212529 !important;
+      box-shadow: 0px 0px 0px;
+    }
+
+    .nav-link {
+      padding: 10px 20px !important;
+    }
+
+    .navbar-toggler:focus, .navbar-toggler:hover {
       outline: #212529;
+      background-color: lightsteelblue;
     }
 
     .navbar a {
@@ -111,7 +137,7 @@
 
     .rounded {
       width: 100%;
-      height: auto; 
+      height: 200px; 
       margin: 20px;
       box-shadow: 5px 10px 18px #212529;
     }
@@ -120,25 +146,6 @@
       border: 0;
       height: 1px;
       background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-    }
-
-    a+nav:hover {
-      color: coral !important;
-    }
-
-    button {
-      transition: transform .2s;
-    }
-
-    button:hover {
-      box-shadow: 5px 5px 5px #212529;
-      transform: scale(1.10);
-    }
-
-    footer {
-      background-image: linear-gradient(#FFF, coral); 
-      margin-top: 16px;
-      border: solid #FFFFFF 2px;
     }
   </style>
 
@@ -159,15 +166,10 @@
             <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="dropdown nav-item">
-            <a class="dropdown-toggle nav-link" href="index.html" data-toggle="dropdown">Projects
-              <b class="caret"></b></a>
+            <a class="dropdown-toggle nav-link" href="index.html" data-toggle="dropdown">Projects<b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <a class="dropdown-toggle nav-link" href="index.html" data-toggle="dropdown">Mini Projects<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <a class="nav-link" href="project1.html">YouTube Homepage Mockup</a>
-                  <a class="nav-link" href="project2.html">Previous Portfolio Website</a>
-                  <a class="nav-link" href="projectlast.html">Template Changes</a>
-                </ul>
+                <a class="nav-link" href="#mini-projects">Mini Projects</a>
+                <a class="nav-link" href="#work-projects">Work Projects</a>
               </ul>
           </li>
           <li class="nav-item">
@@ -179,7 +181,8 @@
   </nav>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+  <div class="content">
+  <header class="masthead" style="background-image: url('img/index.html_screenshot.png')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
@@ -196,42 +199,163 @@
   <!-- Main Content -->
   <div class="container">
     <h2 class="post-title">
-      Mini Projects
+      <a name="mini-projects">Mini Projects</a>
     </h2>
   <div class="row">
-    <div class="col-sm-4 post-preview">
-      <a href="project1.html">
-        <img src="img/YouTube-HomePage-Mockup.png" class="rounded mx-auto d-block" alt="YouTube HomePage Mockup">
-        <caption><b>YouTube Homepage Mockup</b></caption>
-      </a>
+    <div class="col-sm-5 post-preview">
+        <button id="myBtn" class="btn">
+          <img src="img/YouTube-HomePage-Mockup.png" class="rounded mx-auto d-block" alt="YouTube HomePage Mockup">
+          <caption><b>YouTube Homepage Mockup</b></caption>
+        </button>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h4><i>YouTube Homepage Mockup</i></h4>
+            <img src="img/YouTube-HomePage-Mockup.png" alt="YouTube HomePage Mockup" style="margin: 30px 0; border: solid 1px black;">
+            <p><b>My task was to </b>type my own code and use Bootstrap to build a prototype of the YouTube homepage based on the screenshot linked <a href="https://rutgers.instructure.com/courses/40312/files/8427008/download?download_frd=1">here</a>.</p>
+            <p><b>I needed to include:</b>
+              <ol>
+                <li>The YouTube logo</li>
+                <li>8 video thumbnails arranged in a grid of 2 rows by 4 images (for a total of 8 thumbnail images)</li>
+                <li>Locate my own images to use via Google Image Search and resize them to a standard size (either exactly matching YouTube thumbnails or something close)</li>
+                <li>Fill in my own text for videos and include all the same type of metadata for each video as is included in the YouTube homepage</li>
+              </ol>
+            <p><b>I used </b><a href="https://getbootstrap.com/2.3.2/components.html">Bootstrap components</a> to create the search box and submit button as well as the navigation tabs at the top and div tags to create sections for the 8 thumbnails. My YouTube homepage mockup included all major elements represented on the page, but the visual styling and sophistication did not need to match 100% because it was a prototype. The image above was my finished result.</p>
+          </div>
+        </div>
     </div>
-    <div class="col-sm-4 post-preview">
-      <a href="project2.html">
+    <div class="col-sm-5 post-preview">
+      <button id="myBtn" class="btn">
         <img src="img/Old-Portfolio-Home-Page.png" class="rounded mx-auto d-block" alt="Old Portfolio Home Page">
         <caption><b>Previous Portfolio Website</b></caption>
-      </a>
-    </div>
-    <div class="col-sm-4 post-preview">
-      <a href="project3.html">
-        <img src="img/Clean-Blog-Template.png" class="rounded mx-auto d-block" alt="Clean Blog Template">
-        <caption><b>Template Changes</b></caption>
-      </a>
+      </button>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Some text in the Modal..</p>
+        </div>
+      </div>
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-4 post-preview">
-      <a href="projectlast.html">
+    <div class="col-sm-5 post-preview">
+      <button id="myBtn" class="btn">        
+        <img src="img/Clean-Blog-Template.png" class="rounded mx-auto d-block" alt="Clean Blog Template">
+        <caption><b>Template Changes</b></caption>
+      </button>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Some text in the Modal..</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-5 post-preview">
+      <button id="myBtn" class="btn">
         <img src="img/python.png" class="rounded mx-auto d-block" alt="Clean Blog Template">
         <caption><b>Object-Oriented Final Project</b></caption>
-      </a>
+      </button>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Some text in the Modal..</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2 class="post-title">
+    <a name="work-projects">Work Projects</a>
+  </h2>
+  <div class="row">
+    <div class="col-sm-5 post-preview">
+        <button id="myBtn" class="btn">
+          <img src="img/YouTube-HomePage-Mockup.png" class="rounded mx-auto d-block" alt="YouTube HomePage Mockup">
+          <caption><b>BYL Website</b></caption>
+        </button>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+          </div>
+        </div>
+    </div>
+    <div class="col-sm-5 post-preview">
+      <button id="myBtn" class="btn">
+        <img src="img/Old-Portfolio-Home-Page.png" class="rounded mx-auto d-block" alt="Old Portfolio Home Page">
+        <caption><b>BYL Store Setup</b></caption>
+      </button>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Some text in the Modal..</p>
+        </div>
+      </div>
     </div>
   </div>
   </div>
-  <hr> 
+  <br><br> 
+
+  <style>
+    .modal {
+      display: none; 
+      position: fixed; 
+      z-index: 1; 
+      left: 0;
+      top: 0;
+      width: 100%; 
+      height: 100%; 
+      overflow: auto; 
+      background-color: rgb(0,0,0); 
+      background-color: rgba(0,0,0,0.4);
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto; 
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%; 
+      text-align: left;
+    }
+
+    .close {
+      color: #aaa;
+      text-align: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover, .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+
+  <script>
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
 
   <!-- Pager -->
   <div class="clearfix">
-    <a class="btn float-right" href="about.html">Get To Know More About Me &rarr;</a>
+    <a class="btn float-right" href="about.html">About Me &rarr;</a>
+  </div>
   </div>
 
   <!-- Footer -->

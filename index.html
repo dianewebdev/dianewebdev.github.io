@@ -210,9 +210,10 @@
         <div id="myModal" class="modal">
           <div class="modal-content">
             <span class="close">&times;</span>
-            <h4><i>YouTube Homepage Mockup</i></h4>
-            <img src="img/YouTube-HomePage-Mockup.png" alt="YouTube HomePage Mockup" style="margin: 30px 0; border: solid 1px black;">
-            <p><b>My task was to </b>type my own code and use Bootstrap to build a prototype of the YouTube homepage based on the screenshot linked <a href="https://rutgers.instructure.com/courses/40312/files/8427008/download?download_frd=1">here</a>.</p>
+            <h3>YouTube Homepage Mockup</h3>
+            <img src="img/YouTube-HomePage-Mockup.png" alt="YouTube HomePage Mockup">
+            <p><b>My task was to </b>type my own code and use Bootstrap to build a prototype of the YouTube homepage based on the screenshot linked <a href="https://rutgers.instructure.com/courses/40312/files/8427008/download?download_frd=1" target="_blank">here</a>.</p>
+            <hr>
             <p><b>I needed to include:</b>
               <ol>
                 <li>The YouTube logo</li>
@@ -220,7 +221,8 @@
                 <li>Locate my own images to use via Google Image Search and resize them to a standard size (either exactly matching YouTube thumbnails or something close)</li>
                 <li>Fill in my own text for videos and include all the same type of metadata for each video as is included in the YouTube homepage</li>
               </ol>
-            <p><b>I used </b><a href="https://getbootstrap.com/2.3.2/components.html">Bootstrap components</a> to create the search box and submit button as well as the navigation tabs at the top and div tags to create sections for the 8 thumbnails. My YouTube homepage mockup included all major elements represented on the page, but the visual styling and sophistication did not need to match 100% because it was a prototype. The image above was my finished result.</p>
+            <hr>
+            <p><b>I used </b><a href="https://getbootstrap.com/2.3.2/components.html" target="_blank">Bootstrap components</a> to create the search box and submit button as well as the navigation tabs at the top and div tags to create sections for the 8 thumbnails. My YouTube homepage mockup included all major elements represented on the page, but the visual styling and sophistication did not need to match 100% because it was a prototype. The image above was my finished result.</p>
           </div>
         </div>
     </div>
@@ -310,12 +312,40 @@
     }
 
     .modal-content {
-      background-color: #fefefe;
+      background-color: lightsteelblue;
       margin: 15% auto; 
       padding: 20px;
       border: 1px solid #888;
       width: 80%; 
       text-align: left;
+      box-shadow: 2px 2px 15px #212529;
+      font-family: Gill Sans, sans-serif;
+      font-size: 24px;
+      -webkit-animation-name: slideIn;
+      -webkit-animation-duration: 1s;
+    }
+
+    h3 {
+      text-shadow: 2px 2px 2px #212529;
+      color: #fff;
+      text-align: center;
+    }
+
+    img {
+      margin: 20px 0;
+      max-width: 100%
+    }
+
+    hr {
+      width: 100%;
+    }
+
+    a:hover {
+      color: #FFFFFFE6;
+    }
+
+    ol {
+      margin-top: 0;
     }
 
     .close {
@@ -330,6 +360,26 @@
       text-decoration: none;
       cursor: pointer;
     }
+
+    @-webkit-keyframes slideIn {
+      from {
+        bottom: 300px; 
+        opacity: 0;
+      } 
+      to {
+        bottom: 0px;
+        opacity: 1;
+      }
+    }
+
+    @-webkit-keyframes fadeIn {
+      from {
+        opacity: 0;
+      } 
+      to {
+        opacity: 1;
+        }
+      }
   </style>
 
   <script>

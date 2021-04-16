@@ -20,129 +20,11 @@
 
   <!-- Custom styles for this template -->
   <link href="css/clean-blog.min.css" rel="stylesheet">
+  <link href="css/custom-styles.css" rel="stylesheet">
 
 </head>
 
 <body>
-  <!-- Internal Syle Sheet -->
-  <style> 
-    .overlay {
-      margin: 0;
-    }
-
-    .btn {
-      color: #FFFFFF;
-      background-color: #212529; 
-      margin: 16px 0;
-    }
-
-    .btn:focus {
-      color: #FFFFFF;
-      box-shadow: 5px 5px 5px #FFFFFF;
-      border-color: #212529;
-    }
-
-    .btn:hover {
-      color: #212529 !important;
-      background-color: #FFFFFFE6 !important;
-      border-color: lightsteelblue !important;
-      box-shadow: 5px 5px 5px #212529;
-    }
-
-    button {
-      transition: transform .2s;
-    }
-
-    button:hover {
-      box-shadow: 5px 5px 5px #212529;
-      transform: scale(1.10);
-    }
-
-    .col-sm-5 {
-      text-align: center;
-      padding: 40px;
-      margin: 0 auto;
-      transition: transform .2s;
-    }
-
-    .content { 
-      background-color: lightsteelblue;
-    }
-
-    .copyright {
-      color: #212529 !important;
-      text-shadow: 2px 2px 2px #FFF;
-      letter-spacing:1px; 
-    }
-
-    .dropdown-menu {
-      font-size:12px; 
-      font-weight:800; 
-      letter-spacing:1px; 
-      text-transform:uppercase;
-      background-image: linear-gradient(#FFF, lightsteelblue);
-    }
-
-    .fa-bars:hover {
-      background-color: lightsteelblue;
-    }
-
-    .fas:hover, .fab:hover {
-      color: #212529;
-      background-color: #FFFFFF;
-      box-shadow: 2px 2px 2px #212529;
-      border-radius: 50%;
-    }
-
-    footer {
-      background-image: linear-gradient(lightsteelblue, #FFF); 
-    }
-
-    .masthead {
-      width: 100%;
-    }
-
-    #mainNav {
-      position: fixed;
-      top: 0;
-    }
-
-    #myBtn:hover {
-      color: #FFFFFF !important;
-      background-color: #212529 !important;
-      box-shadow: 0px 0px 0px;
-    }
-
-    .nav-link {
-      padding: 10px 20px !important;
-    }
-
-    .navbar-toggler:focus, .navbar-toggler:hover {
-      outline: #212529;
-      background-color: lightsteelblue;
-    }
-
-    .navbar a {
-      transition: transform .2s;
-    }
-
-    .navbar a:hover {
-      transform: scale(1.10);
-    }
-
-    .rounded {
-      width: 100%;
-      height: 200px; 
-      margin: 20px;
-      box-shadow: 5px 10px 18px #212529;
-    }
-
-    .style-one { /*I'll use this if I want to separate content within the body.*/
-      border: 0;
-      height: 1px;
-      background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-    }
-  </style>
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -160,15 +42,16 @@
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
           <li class="dropdown nav-item">
             <a class="dropdown-toggle nav-link" href="index.html" data-toggle="dropdown">Projects<b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <a class="nav-link" href="#mini-projects">Mini Projects</a>
+                <hr>
                 <a class="nav-link" href="#work-projects">Work Projects</a>
               </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
           </li>
         </ul>
       </div>
@@ -249,7 +132,7 @@
     </div>
     <div class="col-sm-5 post-preview">
       <button id="myBtn" class="btn">
-        <img src="img/python.png" class="rounded mx-auto d-block" alt="Clean Blog Template">
+        <img src="img/object-oriented.png" class="rounded mx-auto d-block" alt="Object Oriented">
         <caption><b>Object-Oriented Final Project</b></caption>
       </button>
       <div id="myModal" class="modal">
@@ -266,7 +149,7 @@
   <div class="row">
     <div class="col-sm-5 post-preview">
         <button id="myBtn" class="btn">
-          <img src="img/BYL-LA-site-homepage.png" class="rounded mx-auto d-block" alt="YouTube HomePage Mockup">
+          <img src="img/BYL-LA-site-homepage.png" class="rounded mx-auto d-block" alt="BYL Website">
           <caption><b>BYL Website</b></caption>
         </button>
         <div id="myModal" class="modal">
@@ -278,7 +161,7 @@
     </div>
     <div class="col-sm-5 post-preview">
       <button id="myBtn" class="btn">
-        <img src="img/BYL-shop-page.png" class="rounded mx-auto d-block" alt="Old Portfolio Home Page">
+        <img src="img/BYL-shop-page.png" class="rounded mx-auto d-block" alt="BYL Store Setup">
         <caption><b>BYL Store Setup</b></caption>
       </button>
       <div id="myModal" class="modal">
@@ -290,112 +173,8 @@
     </div>
   </div>
   </div>
-  <br><br> 
-
-  <style>
-    .modal {
-      display: none; 
-      position: fixed; 
-      z-index: 1; 
-      left: 0;
-      top: 0;
-      width: 100%; 
-      height: 100%; 
-      overflow: auto; 
-      background-color: rgb(0,0,0); 
-      background-color: rgba(0,0,0,0.4);
-    }
-
-    .modal-content {
-      background-color: lightsteelblue;
-      margin: 15% auto; 
-      padding: 20px;
-      border: 1px solid #888;
-      width: 80%; 
-      text-align: left;
-      box-shadow: 2px 2px 15px #212529;
-      font-family: Gill Sans, sans-serif;
-      font-size: 24px;
-      -webkit-animation-name: slideIn;
-      -webkit-animation-duration: 1s;
-    }
-
-    h3 {
-      text-shadow: 2px 2px 2px #212529;
-      color: #fff;
-      text-align: center;
-    }
-
-    img {
-      margin: 20px 0;
-      max-width: 100%
-    }
-
-    hr {
-      width: 100%;
-    }
-
-    a:hover {
-      color: #FFFFFFE6;
-    }
-
-    ol {
-      margin-top: 0;
-    }
-
-    .close {
-      color: #aaa;
-      text-align: right;
-      font-size: 28px;
-      font-weight: bold;
-    }
-
-    .close:hover, .close:focus {
-      color: black;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    @-webkit-keyframes slideIn {
-      from {
-        bottom: 300px; 
-        opacity: 0;
-      } 
-      to {
-        bottom: 0px;
-        opacity: 1;
-      }
-    }
-
-    @-webkit-keyframes fadeIn {
-      from {
-        opacity: 0;
-      } 
-      to {
-        opacity: 1;
-        }
-      }
-  </style>
-
-  <script>
-    var modal = document.getElementById("myModal");
-    var btn = document.getElementById("myBtn");
-    var span = document.getElementsByClassName("close")[0];
-
-    btn.onclick = function() {
-      modal.style.display = "block";
-    }
-
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
+  <br>
+  <br> 
 
   <!-- Pager -->
   <div class="clearfix">
@@ -438,6 +217,25 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/clean-blog.min.js"></script>
+  <script>
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
 
 </body>
 

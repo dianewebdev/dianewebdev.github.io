@@ -20,133 +20,9 @@
 
   <!-- Custom styles for this template -->
   <link href="css/clean-blog.min.css" rel="stylesheet">
+  <link href="css/custom-styles.css" rel="stylesheet">
 
 </head>
-
-  <!-- Internal Syle Sheet -->
-  <style> 
-    .overlay {
-      margin: 0;
-    }
-
-    .btn {
-      color: #FFFFFF;
-      background-color: #212529; 
-      margin: 16px 0;
-    }
-
-    .btn:focus {
-      color: #FFFFFF;
-      box-shadow: 5px 5px 5px #FFFFFF;
-      border-color: #212529;
-    }
-
-    .btn:hover {
-      color: #212529 !important;
-      background-color: #FFFFFFE6 !important;
-      border-color: lightsteelblue !important;
-      box-shadow: 5px 5px 5px #212529;
-    }
-
-    button {
-      transition: transform .2s;
-    }
-
-    button:hover {
-      box-shadow: 5px 5px 5px #212529;
-      transform: scale(1.10);
-    }
-
-    .col-sm-5 {
-      text-align: center;
-      padding: 40px;
-      margin: 0 auto;
-      transition: transform .2s;
-    }
-
-    .content { 
-      background-color: lightsteelblue;
-    }
-
-    .copyright {
-      color: #212529 !important;
-      text-shadow: 2px 2px 2px #FFF;
-      letter-spacing:1px; 
-    }
-
-    .dropdown-menu {
-      font-size:12px; 
-      font-weight:800; 
-      letter-spacing:1px; 
-      text-transform:uppercase;
-      background-image: linear-gradient(#FFF, lightsteelblue);
-    }
-
-    .fa-bars:hover {
-      background-color: lightsteelblue;
-    }
-
-    .fab:hover {
-      color: #212529;
-      background-color: #FFFFFF;
-      box-shadow: 2px 2px 2px #212529;
-    }
-
-    .fas:hover {
-      color: #212529;
-      background-color: #FFFFFF;
-      box-shadow: 2px 2px 2px #212529;
-    }
-
-    footer {
-      background-image: linear-gradient(lightsteelblue, #FFF); 
-    }
-
-    .masthead {
-      width: 100%;
-    }
-
-    #mainNav {
-      position: fixed;
-      top: 0;
-    }
-
-    #myBtn:hover {
-      color: #FFFFFF !important;
-      background-color: #212529 !important;
-      box-shadow: 0px 0px 0px;
-    }
-
-    .nav-link {
-      padding: 10px 20px !important;
-    }
-
-    .navbar-toggler:focus, .navbar-toggler:hover {
-      outline: #212529;
-      background-color: lightsteelblue;
-    }
-
-    .navbar a {
-      transition: transform .2s;
-    }
-
-    .navbar a:hover {
-      transform: scale(1.10);
-    }
-
-    .rounded {
-      width: 100%;
-      height: 200px; 
-      margin: 20px;
-      box-shadow: 5px 10px 18px #212529;
-    }
-
-    .style-one { /*I'll use this if I want to separate content within the body.*/
-      border: 0;
-      height: 1px;
-      background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-    }
-  </style>
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -164,15 +40,16 @@
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
           <li class="dropdown nav-item">
             <a class="dropdown-toggle nav-link" href="index.html" data-toggle="dropdown">Projects<b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <a class="nav-link" href="index.html#mini-projects">Mini Projects</a>
+                <hr>
                 <a class="nav-link" href="index.html#work-projects">Work Projects</a>
               </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
           </li>
         </ul>
       </div>
@@ -199,27 +76,27 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <h2 class="post-title" style="margin-bottom: 50px;">
+        <h2 class="post-title contact-post-title">
           Want to get in touch?
         </h2>
-        <img src="img/thought-youd-never-ask.gif" alt="thought youd never ask gif" style="display: block; width: 100%; margin: 0 auto">
-        <hr style="margin: 75px 0; display: visibility; visibility: hidden;"> 
-        <h2 class="post-title" style="margin-bottom: 50px;">
+        <img src="img/thought-youd-never-ask.gif" alt="thought youd never ask gif" id="gif-1">
+        <hr class="contact-space"> 
+        <h2 class="post-title contact-post-title">
           Here's How to Contact Me 📲
         </h2>
-        <a class="btn" href="https://www.linkedin.com/in/diane-akasike/" target="_blank" style="display: block;">LinkedIn</a>
-        <span class="caption text-muted" style="font-size: 20px;">or</span>
-        <a class="btn" href="mailto:dianeakasike@gmail.com" target="_blank" style="display: block;">Email</a>
-        <hr style="margin: 75px 0; display: visibility; visibility: hidden;">  
+        <a class="btn contact-button" href="https://www.linkedin.com/in/diane-akasike/" target="_blank">LinkedIn</a>
+        <span class="caption text-muted" id="or">or</span>
+        <a class="btn contact-button" href="mailto:dianeakasike@gmail.com" target="_blank">Email</a>
+        <hr class="contact-space">  
         <div>
-          <h2 class="section-heading" style="display: block; float: left; width: 50%; margin: 0; padding: 5% 0;">I look<br>forward to<br>hearing from you.</h2>
-          <img src="img/fall-out-of-chair.gif" alt="fall out of chair gif" style="display: block; float: right; width: 50%; height: auto;">
+          <h2 class="section-heading" id="contact-message">I look<br>forward to<br>hearing from you.</h2>
+          <img src="img/fall-out-of-chair.gif" alt="fall out of chair gif" id="gif-2">
         </div>
       </div>
     </div>
   </div>
-  <br><br>
-  </div>
+  <br>
+  <br>
 
   <!-- Footer -->
   <footer>

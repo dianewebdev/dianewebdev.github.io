@@ -186,6 +186,10 @@ button:hover {
   box-shadow: 2px 2px 2px #212529;
 }
 
+footer {
+  background-image: linear-gradient(lightsteelblue, #FFF); 
+}
+
 #gif-1 {
   display: block; 
   width: 100%; 
@@ -196,10 +200,6 @@ button:hover {
   display: block; 
   float: right; 
   width: 50%; 
-}
-
-footer {
-  background-image: linear-gradient(lightsteelblue, #FFF); 
 }
 
 h3 {

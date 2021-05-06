@@ -194,10 +194,6 @@ button:hover {
   background-color: lightsteelblue;
 }
 
-/*.fas:hover, .fab:hover {
-  color: white;
-}*/
-
 .fa-inverse:hover {
   color: black;
 }

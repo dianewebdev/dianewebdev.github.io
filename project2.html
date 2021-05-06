@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Project2 | DianeWebDev</title>
+  <title>YouTube Homepage Mockup | DianeWebDev</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -20,154 +20,34 @@
 
   <!-- Custom styles for this template -->
   <link href="css/clean-blog.min.css" rel="stylesheet">
+  <link href="css/custom-styles.css" rel="stylesheet">
 
 </head>
 
-  <!-- Internal Syle Sheet -->
-  <style type="text/css"> 
-    #mainNav {
-      position: fixed;
-      top: 0;
-    }
-
-    .btn {
-      color: #FFFFFF;
-      background-color: #212529; 
-      border-color: white;
-    }
-
-    .btn:focus {
-      color: #FFFFFF;
-      box-shadow: 5px 5px 5px #FFFFFF;
-      border-color: #212529;
-    }
-
-    .btn:hover {
-      color: #212529 !important;
-      background-color: #6699CC !important;
-      border-color: #6699CC !important;
-      box-shadow: 5px 5px 5px #212529;
-    }
-
-    .col-sm-4 {
-      text-align: center;
-      padding: 40px;
-      margin: 0 auto;
-      transition: transform .2s;
-    }
-
-    .col-sm-4:hover {
-      transform: scale(1.25);
-    }
-
-    .copyright {
-      color: #FFFFFF !important;
-      text-shadow: 2px 2px 2px #212529;
-      letter-spacing:1px; 
-    }
-
-    .dropdown-menu {
-      font-size:12px; 
-      font-weight:800; 
-      letter-spacing:1px; 
-      text-transform:uppercase;
-      background-image: linear-gradient(#FFF, #6699CC);
-    }
-
-    .fab:hover {
-      color: #212529;
-      background-color: #6699CC;
-      border-radius: 25%;
-      box-shadow: 2px 2px 2px #212529;
-    }
-
-    .fas:hover {
-      color: #212529;
-      background-color: #6699CC;
-      border-radius: 25%;
-      box-shadow: 2px 2px 2px #212529;
-    }
-
-    .masthead {
-      width: 100%;
-    }
-
-    .nav-link {
-      padding: 10px 25px !important;
-    }
-
-    .navbar-toggler:focus {
-      outline: #212529;
-    }
-
-    .navbar a {
-      transition: transform .2s;
-    }
-
-    .navbar a:hover {
-      transform: scale(1.10);
-    }
-
-    .rounded {
-      width: 90%;
-      height: auto; 
-      margin: 20px;
-      box-shadow: 5px 10px 18px #212529;
-    }
-
-    .style-one { /*I'll use this if I want to separate content within the body.*/
-      border: 0;
-      height: 1px;
-      background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-    }
-
-    a+nav:hover {
-      color: #6699CC !important;
-    }
-
-    button {
-      transition: transform .2s;
-    }
-
-    button:hover {
-      box-shadow: 5px 5px 5px #212529;
-      transform: scale(1.10);
-    }
-
-    footer {
-      background-image: linear-gradient(#FFF, #6699CC); 
-      margin-top: 16px;
-      border: solid #FFFFFF 2px;
-    }
-  </style>
-
+<body>
+ 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand" href="index.html">DianeWebDev</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
+        Menu<i class="fas fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="index.html">Home</a>
           </li>
+          <li class="dropdown nav-item">
+            <a class="dropdown-toggle nav-link" href="index.html" data-toggle="dropdown">Projects<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <a class="nav-link" href="#mini-projects">Mini Projects</a>
+                <hr>
+                <a class="nav-link" href="#work-projects">Work Projects</a>
+              </ul>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="dropdown nav-item">
-            <a class="dropdown-toggle nav-link" href="index.html" data-toggle="dropdown">Projects
-              <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <a class="dropdown-toggle nav-link" href="index.html" data-toggle="dropdown">Mini Projects<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <a class="nav-link" href="project1.html">YouTube Homepage Mockup</a>
-                  <a class="nav-link" href="project2.html">Previous Portfolio Website</a>
-                  <a class="nav-link" href="projectlast.html">Template Changes</a>
-                </ul>
-              </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
@@ -178,39 +58,48 @@
   </nav>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('img/project2-bg.jpg')">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading">
-            <h1>Second Project</h1>
-            <span class="subheading">This would be the second project.</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+  <div class="content">
 
   <!-- Post Content -->
   <article>
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <h2 class="post-title">
-            Second Project
-          </h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rhoncus gravida posuere. Quisque ut dignissim risus. Pellentesque faucibus ullamcorper faucibus. Pellentesque eget dolor eu neque consequat faucibus. Phasellus euismod in elit ut cursus. Ut accumsan quam nisi, eget blandit lacus consectetur non. Integer molestie dui nec rhoncus aliquet. Sed nibh nibh, aliquet accumsan magna posuere, elementum bibendum libero. Vestibulum egestas quam non nibh posuere efficitur. Ut venenatis eros eros, non faucibus augue ornare a. Suspendisse non est sit amet nulla viverra placerat sit amet vitae lectus. Fusce pretium tellus nec nibh iaculis, a vulputate sem interdum. Sed metus tortor, facilisis sit amet nibh et, consectetur hendrerit lectus. Sed vulputate lacus tellus, ac accumsan augue commodo et.</p>
+        <div class="col-lg-8 col-md-10 mx-auto project-page">
+          <h3>
+            YouTube Homepage Mockup
+          </h3>
+          <img src="img/YouTube-HomePage-Mockup.png" alt="YouTube HomePage Mockup" class="img-fluid">
+          <p><b>My task was to </b>type my own code and use Bootstrap to build a prototype of the YouTube homepage based on the screenshot linked <a href="https://rutgers.instructure.com/courses/40312/files/8427008/download?download_frd=1" target="_blank">here</a>.</p>
+          <hr id="modal-line">
+          <p><b>I needed to include:</b>
+            <ol>
+              <li>The YouTube logo</li>
+              <li>8 video thumbnails arranged in a grid of 2 rows by 4 images (for a total of 8 thumbnail images)</li>
+              <li>Locate my own images to use via Google Image Search and resize them to a standard size (either exactly matching YouTube thumbnails or something close)</li>
+              <li>Fill in my own text for videos and include all the same type of metadata for each video as is included in the YouTube homepage</li>
+            </ol>
+          <hr id="modal-line">
+          <p><b>I used </b><a href="https://getbootstrap.com/2.3.2/components.html" target="_blank">Bootstrap components</a> to create the search box and submit button as well as the navigation tabs at the top and div tags to create sections for the 8 thumbnails. My YouTube homepage mockup included all major elements represented on the page, but the visual styling and sophistication did not need to match 100% because it was a prototype. The image above was my finished result.</p>
         </div>
       </div>
     </div>
   </article>
-  <hr>
+  <br>
+  <br> 
 
   <!-- Pager -->
   <div class="clearfix">
-      <a class="btn float-left" href="project1.html">&larr; PREVIOUS PROJECT </a>
-      <a class="btn float-right" href="project3.html">NEXT PROJECT &rarr;</a>
+    <div class="pagination">
+      <a href="project1.html">&laquo;</a>
+      <a href="project1.html">&#10022;</a>
+      <a class="active" href="#">&#10022;</a>
+      <a href="project3.html">&#10022;</a>
+      <a href="project4.html">&#10022;</a>
+      <a href="project5.html">&#10022;</a>
+      <a href="project6.html">&#10022;</a>
+      <a href="project3.html">&raquo;</a>
+    </div>
+  </div>
   </div>
       
   <!-- Footer -->
@@ -220,7 +109,7 @@
         <div class="col-lg-8 col-md-10 mx-auto">
           <ul class="list-inline text-center">
             <li class="list-inline-item">
-              <a href="https://www.linkedin.com/in/diane-akasike/" target="_blank">
+              <a href="https://www.linkedin.com/in/diane-akasike/" target="_blank" class="footer-social-media">
                 <span class="fa-stack fa-lg">
                   <i class="fas fa-circle fa-stack-2x"></i>
                   <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
@@ -228,7 +117,7 @@
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="mailto:dianeakasike@gmail.com" target="_blank">
+              <a href="mailto:dianeakasike@gmail.com" target="_blank" class="footer-social-media">
                 <span class="fa-stack fa-lg">
                   <i class="fas fa-circle fa-stack-2x"></i>
                   <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>

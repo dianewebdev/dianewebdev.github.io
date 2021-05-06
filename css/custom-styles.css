@@ -31,7 +31,7 @@
   }
 
 a:hover {
-  color: #FFFFFFE6;
+  color: lightsteelblue;
 }
 
 .about-padding {
@@ -68,6 +68,10 @@ a:hover {
   -webkit-transform: rotate(45deg);
 }
 
+article {
+  padding-top: 100px;
+}
+
 #bio {
   text-align: justify;
 }
@@ -95,6 +99,11 @@ a:hover {
   background-color: #FFFFFFE6 !important;
   border-color: lightsteelblue !important;
   box-shadow: 5px 5px 5px #212529;
+}
+
+.btn:hover > .project-link {
+  text-decoration: none;
+  color: #212529;
 }
 
 button {
@@ -142,6 +151,11 @@ button:hover {
   padding: 5% 0;
 }
 
+.clearfix {
+  text-align: center;
+  padding-bottom: 35px;
+}
+
 .contact-post-title {
   margin-bottom: 50px;
 }
@@ -180,14 +194,20 @@ button:hover {
   background-color: lightsteelblue;
 }
 
-.fas:hover, .fab:hover {
-  color: #212529;
-  background-color: #FFFFFF;
-  box-shadow: 2px 2px 2px #212529;
+/*.fas:hover, .fab:hover {
+  color: white;
+}*/
+
+.fa-inverse:hover {
+  color: black;
 }
 
 footer {
   background-image: linear-gradient(lightsteelblue, #FFF); 
+}
+
+.footer-social-media:hover {
+  color: white;
 }
 
 #gif-1 {
@@ -203,8 +223,8 @@ footer {
 }
 
 h3 {
-  text-shadow: 2px 2px 2px #212529;
-  color: #fff;
+  text-shadow: 2px 2px 2px #FFFFFFE6;
+  color: #212529;
   text-align: center;
 }
 
@@ -215,6 +235,14 @@ html {
 img {
   margin: 20px 0;
   max-width: 100%
+}
+
+.img-fluid { 
+  width: 85%;
+  height: auto;
+  display: block;
+  margin: 50px auto; 
+  border: 2px solid #212529;
 }
 
 #mainNav {
@@ -257,12 +285,6 @@ img {
   width: 100%;
 }
 
-#myBtn:hover {
-  color: #FFFFFF !important;
-  background-color: #212529 !important;
-  box-shadow: 0px 0px 0px;
-}
-
 .nav-link {
   padding: 10px 20px !important;
 }
@@ -289,6 +311,29 @@ ol {
   max-width: 100%;
 }
 
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black !important;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.pagination a.active {
+  background-color: ghostwhite;
+  color: white;
+  display: block;
+}
+
+.pagination a:hover:not(.active) {
+  color: #ddd !important;
+  display: block;
+}
+
 .panel-seperate {
   padding-top: 20px;
 }
@@ -298,6 +343,24 @@ ol {
   background-color: #CCC;
   display: none;
   overflow: hidden;
+}
+
+.project-link {
+  color: #FFFFFF;
+}
+
+.project-link:hover {
+  text-decoration: none;
+  color: #212529;
+} 
+
+.project-page {
+  border: 5px solid #FFFFFFE6;
+  padding: 40px;
+  margin: 60px 0;
+  background-color: ghostwhite;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 80%;
 }
 
 #or {

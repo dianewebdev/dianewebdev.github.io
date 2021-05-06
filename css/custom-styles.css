@@ -1,7 +1,3 @@
-a:hover {
-  color: lightsteelblue;
-}
-
 .about-padding {
   padding: 30px 30px 0 30px;
 }
@@ -144,11 +140,10 @@ button:hover {
 }
 
 #contact-message {
-  display: block; 
-  float: left; 
   width: 50%; 
   margin: 0; 
   padding: 5% 0;
+  align-self: center;
 }
 
 .clearfix {
@@ -158,6 +153,25 @@ button:hover {
 
 .contact-post-title {
   margin-bottom: 50px;
+}
+
+#contact-section-1 {
+  padding: 50px;
+  color: white;
+  background-color: lightslategray;
+}
+
+#contact-section-2 {
+  padding: 50px;
+  background-color: gainsboro;
+}
+
+#contact-section-3 {
+  padding: 50px;
+  color: white;
+  background-color: #212529;
+  display: flex; 
+  justify-content: space-between;
 }
 
 .contact-space {
@@ -175,14 +189,6 @@ button:hover {
   text-align: center;
   margin: 60px 0;
   color: black;
-}
-
-.dropdown-menu {
-  font-size:12px; 
-  font-weight:800; 
-  letter-spacing:1px; 
-  text-transform:uppercase;
-  background-image: linear-gradient(#FFF, lightsteelblue);
 }
 
 .fa-arrow-down:hover {
@@ -239,6 +245,10 @@ footer {
   background-image: linear-gradient(lightsteelblue, #FFF); 
 }
 
+.footer-social-media {
+  color: black;
+}
+
 .footer-social-media:hover {
   color: white;
 }
@@ -250,9 +260,8 @@ footer {
 }
 
 #gif-2 {
-  display: block; 
-  float: right; 
   width: 50%; 
+  margin-left: 5%;
 }
 
 h4 {
@@ -296,10 +305,6 @@ img {
 #mainNav {
   position: fixed;
   top: 0;
-}
-
-.masthead {
-  width: 100%;
 }
 
 .modal {
@@ -350,13 +355,20 @@ img {
   transform: scale(1.10);
 }
 
-ol {
-  margin-top: 0;
+.normal-links {
+  text-decoration: none !important;
+  color: darkblue;
+  font-weight: bold;
+  font-style: italic;
 }
 
-.overlay {
-  margin: 0;
-  max-width: 100%;
+.normal-links:hover {
+  color: lightsteelblue;
+  text-decoration: none;
+}
+
+ol {
+  margin-top: 0;
 }
 
 .pagination {
@@ -435,10 +447,4 @@ ol {
 #skills-list {
   list-style: none; 
   padding: 40px;
-}
-
-.style-one { /*I'll use this if I want to separate content within the body.*/
-  border: 0;
-  height: 1px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }

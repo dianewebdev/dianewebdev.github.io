@@ -255,6 +255,14 @@ footer {
   width: 50%; 
 }
 
+h4 {
+  margin-bottom: 50px;
+}
+
+.h4-middle {
+  margin: 50px 0;
+}
+
 h3 {
   text-shadow: 2px 2px 2px #FFFFFFE6;
   color: #212529;
@@ -276,6 +284,13 @@ img {
   display: block;
   margin: 50px auto; 
   border: 2px solid #212529;
+}
+
+.img-fluid-no-gap { 
+  width: 85%;
+  height: auto;
+  display: block;
+  margin: 0px auto; 
 }
 
 #mainNav {

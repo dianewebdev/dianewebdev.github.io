@@ -60,26 +60,90 @@
           <h3>
             Object-Oriented Programming
           </h3>
-          <img src="img/code-1.png" alt="YouTube HomePage Mockup" class="img-fluid">
-          <img src="img/object-oriented.png" alt="YouTube HomePage Mockup" class="img-fluid">
-          <img src="img/code-3.png" alt="YouTube HomePage Mockup" class="img-fluid">
-          <img src="img/code-4.png" alt="YouTube HomePage Mockup" class="img-fluid">
-          <img src="img/code-5.png" alt="YouTube HomePage Mockup" class="img-fluid">
-          <img src="img/code-6.png" alt="YouTube HomePage Mockup" class="img-fluid">
-          <img src="img/code-7.png" alt="YouTube HomePage Mockup" class="img-fluid">
-          <img src="img/code-8.png" alt="YouTube HomePage Mockup" class="img-fluid">
-          <img src="img/code-9.png" alt="YouTube HomePage Mockup" class="img-fluid">
-          <p><b>My task was to </b>type my own code and use Bootstrap to build a prototype of the YouTube homepage based on the screenshot linked <a href="https://rutgers.instructure.com/courses/40312/files/8427008/download?download_frd=1" target="_blank">here</a>.</p>
+          <img src="img/object-oriented.png" alt="Object-Oriented" class="img-fluid">
+          <p>I extracted data from the Twitter API. I wanted my code to show me tweets that include the hashtag #socialdistancing and help me determine which of the accounts that tweeted with this hashtag have the highest following. Based on the Tweet object in the API, I used root-level attributes to extract relevant information. More specifically, I pinpointed the ‘user’ (also an object) and ‘entities’ attributes to extract data from the tweets that include this hashtag.</p>
           <hr id="modal-line">
-          <p><b>I needed to include:</b>
-            <ol>
-              <li>The YouTube logo</li>
-              <li>8 video thumbnails arranged in a grid of 2 rows by 4 images (for a total of 8 thumbnail images)</li>
-              <li>Locate my own images to use via Google Image Search and resize them to a standard size (either exactly matching YouTube thumbnails or something close)</li>
-              <li>Fill in my own text for videos and include all the same type of metadata for each video as is included in the YouTube homepage</li>
-            </ol>
+          <h4>Code Walkthrough</h4>
+          <p>I first imported Tweepy, which is the Python library that allowed me to access the Twitter API, using an 'import tweepy' statement. I then imported CSV, which is a comma-separated values file that allowed me to export data into Excel, by using an 'import csv' statement.</p> 
+          <img src="img/object-oriented.png" alt="First Code Snippet" class="img-fluid">
+          <p>This block of code creates an extract function that accepts one query argument as a string object. The function is meant to search Twitter and return the query results.</p>
+          <img src="img/code-3.png" alt="Second Code Snippet" class="img-fluid">
+          <p>This block of code requires application credentials from a Twitter developer account in order to allow the code to access the Twitter API.</p>
+          <img src="img/code-4.png" alt="Third Code Snippet" class="img-fluid">
+          <p>This block configures the Tweepy app setup.</p>
+          <img src="img/code-5.png" alt="Fourth Code Snippet" class="img-fluid">
+          <p>This block configures the Tweepy user setup.</p>
+          <img src="img/code-6.png" alt="Fifth Code Snippet" class="img-fluid">
+          <p>This block creates an object called ‘tw’ that accesses Tweepy.</p>
+          <img src="img/code-7.png" alt="Sixth Code Snippet" class="img-fluid">
+          <p>This block creates an object called ‘data’ that uses the extract function to search Twitter for the query: “#socialdistancing”.</p>
+          <img src="img/code-8.png" alt="Seventh Code Snippet" class="img-fluid">
+          <p>This block iterates through the data object and performs various tasks, including extracting data related to attributes from Tweepy, assigning variables that target specific data, and printing the results in a full sentence. I extracted the ‘user’ and ‘entities’ attributes related to the query because the ‘user’ attribute includes the user id and followers count and the ‘entities’ attribute includes the hashtags.</p>
+          <img src="img/code-9.png" alt="Eighth Code Snippet" class="img-fluid">
+          <p>This block loads the data into a csv file.</p>
           <hr id="modal-line">
-          <p><b>I used </b><a href="https://getbootstrap.com/2.3.2/components.html" target="_blank">Bootstrap components</a> to create the search box and submit button as well as the navigation tabs at the top and div tags to create sections for the 8 thumbnails. My YouTube homepage mockup included all major elements represented on the page, but the visual styling and sophistication did not need to match 100% because it was a prototype. The image above was my finished result.</p>
+          <h4>Full Python Script</h4>
+          <code>
+import tweepy 
+import csv
+
+#Returns results from Twitter search 
+def extract(query): 
+ """Accepts one query argument as a string object that will search Twitter""" 
+ if not isinstance(query, str): 
+ return None 
+ else: 
+ try: 
+ results = tw.search(query, tweet_mode="extended") 
+ return results 
+ except: 
+ return None 
+
+# Twitter API configuration 
+twconfig = { 
+ 'api_key': "", 
+ 'api_secret': "", 
+ 'access_token': "", 
+ "access_secret": ""} 
+
+# Tweepy app setup 
+auth = tweepy.OAuthHandler( 
+ twconfig['api_key'], 
+ twconfig['api_secret']) 
+
+#Tweepy user setup 
+auth.set_access_token( 
+ twconfig['access_token'], 
+ twconfig['access_secret']) 
+
+# Creates an object that accesses Tweepy 
+tw = tweepy.API(auth) 
+
+#Creates data object and assigns a value with extract function 
+data = extract("#socialdistancing") 
+
+#Iterates through data object 
+for tweet in data: 
+ extract("tweet.user")
+ extract("tweet.entities") 
+ userID = tweet.user.id 
+ userFollowers = tweet.user.followers_count 
+ print(f"User {userID} named '{userName}' used the #socialdistancing hashtag\n in their tweet and has {userFollowers} followers.\n") 
+
+#Exports data into csv file 
+with open("dianeakasike-final.csv","w") as output: 
+ for tweet in data: 
+ output.write(f"{userID}, {userName}, {userFollowers}\n")
+          </code>
+          <hr id="modal-line">
+          <h4>Summary of Results</h4>
+          <p>The tool I used after my loading process was Microsoft Excel. My goal was to create a table with user ID, user screen name, and number of followers of each account that used the hashtag #socialdistancing. My code only produced 15 search results at a time so the table has 15 rows.</p>
+          <img src="img/Results.png" alt="Summary of Results" class="img-fluid">
+          <hr id="modal-line">
+          <h4>What I Would Do Next</h4>
+          <p>An idea for a potential real-world project that could use this code is as follows:</p> 
+          <p>A clothing company has created a new clothing line that was designed around the concept of social distancing. They want to use Twitter as their main platform of promotion and want to reach out to popular users who would be willing to partner with their company and promote the new line. This code can be a starting point to help the company be able to see which users have recently made tweets using the hashtag #socialdistancing and how popular those users are based on their number of followers.</p> 
+          <p>If this project were real, the company could use the user’s id to look up their twitter profile and determine if they want to partner with them. They could also continue to add on to the table (exported data) in Excel. To improve this code, I would change it to be able to constantly update the number of followers real time and access to more of the API.</p>
         </div>
       </div>
     </div>
@@ -91,12 +155,12 @@
   <div class="clearfix">
     <div class="pagination">
       <a href="project3.html">&laquo;</a>
-      <a href="project1.html">&#10022;</a>
-      <a href="project2.html">&#10022;</a>
-      <a href="project3.html">&#10022;</a>
-      <a class="active" href="#">&#10022;</a>
-      <a href="project5.html">&#10022;</a>
-      <a href="project6.html">&#10022;</a>
+      <a href="project1.html">1</a>
+      <a href="project2.html">2</a>
+      <a href="project3.html">3</a>
+      <a class="active" href="#">4</a>
+      <a href="project5.html">5</a>
+      <a href="project6.html">6</a>
       <a href="project5.html">&raquo;</a>
     </div>
   </div>

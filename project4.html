@@ -5,8 +5,8 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="DianeWebDev is a web development portfolio website for Diane Akasike. Check out her 'Object-Oriented Programming' projects!">
+  <meta name="author" content="Diane Akasike">
 
   <title>Object-Oriented Programming | DianeWebDev</title>
 
@@ -63,26 +63,26 @@
           <img src="img/object-oriented.png" alt="Object-Oriented" class="img-fluid">
           <p>I extracted data from the Twitter API. I wanted my code to show me tweets that include the hashtag #socialdistancing and help me determine which of the accounts that tweeted with this hashtag have the highest following. Based on the Tweet object in the API, I used root-level attributes to extract relevant information. More specifically, I pinpointed the ‘user’ (also an object) and ‘entities’ attributes to extract data from the tweets that include this hashtag.</p>
           <hr id="modal-line">
-          <h4>Code Walkthrough</h4>
+          <h4 class="h4-middle">Code Walkthrough</h4>
           <p>I first imported Tweepy, which is the Python library that allowed me to access the Twitter API, using an 'import tweepy' statement. I then imported CSV, which is a comma-separated values file that allowed me to export data into Excel, by using an 'import csv' statement.</p> 
-          <img src="img/object-oriented.png" alt="First Code Snippet" class="img-fluid">
+          <img src="img/object-oriented.png" alt="First Code Snippet" class="img-fluid-no-gap">
           <p>This block of code creates an extract function that accepts one query argument as a string object. The function is meant to search Twitter and return the query results.</p>
-          <img src="img/code-3.png" alt="Second Code Snippet" class="img-fluid">
+          <img src="img/code-3.png" alt="Second Code Snippet" class="img-fluid-no-gap">
           <p>This block of code requires application credentials from a Twitter developer account in order to allow the code to access the Twitter API.</p>
-          <img src="img/code-4.png" alt="Third Code Snippet" class="img-fluid">
+          <img src="img/code-4.png" alt="Third Code Snippet" class="img-fluid-no-gap">
           <p>This block configures the Tweepy app setup.</p>
-          <img src="img/code-5.png" alt="Fourth Code Snippet" class="img-fluid">
+          <img src="img/code-5.png" alt="Fourth Code Snippet" class="img-fluid-no-gap">
           <p>This block configures the Tweepy user setup.</p>
-          <img src="img/code-6.png" alt="Fifth Code Snippet" class="img-fluid">
+          <img src="img/code-6.png" alt="Fifth Code Snippet" class="img-fluid-no-gap">
           <p>This block creates an object called ‘tw’ that accesses Tweepy.</p>
-          <img src="img/code-7.png" alt="Sixth Code Snippet" class="img-fluid">
+          <img src="img/code-7.png" alt="Sixth Code Snippet" class="img-fluid-no-gap">
           <p>This block creates an object called ‘data’ that uses the extract function to search Twitter for the query: “#socialdistancing”.</p>
-          <img src="img/code-8.png" alt="Seventh Code Snippet" class="img-fluid">
+          <img src="img/code-8.png" alt="Seventh Code Snippet" class="img-fluid-no-gap">
           <p>This block iterates through the data object and performs various tasks, including extracting data related to attributes from Tweepy, assigning variables that target specific data, and printing the results in a full sentence. I extracted the ‘user’ and ‘entities’ attributes related to the query because the ‘user’ attribute includes the user id and followers count and the ‘entities’ attribute includes the hashtags.</p>
-          <img src="img/code-9.png" alt="Eighth Code Snippet" class="img-fluid">
+          <img src="img/code-9.png" alt="Eighth Code Snippet" class="img-fluid-no-gap">
           <p>This block loads the data into a csv file.</p>
           <hr id="modal-line">
-          <h4>Full Python Script</h4>
+          <h4 class="h4-middle">Full Python Script</h4>
           <code>
 import tweepy 
 import csv
@@ -136,11 +136,11 @@ with open("dianeakasike-final.csv","w") as output:
  output.write(f"{userID}, {userName}, {userFollowers}\n")
           </code>
           <hr id="modal-line">
-          <h4>Summary of Results</h4>
+          <h4 class="h4-middle">Summary of Results</h4>
           <p>The tool I used after my loading process was Microsoft Excel. My goal was to create a table with user ID, user screen name, and number of followers of each account that used the hashtag #socialdistancing. My code only produced 15 search results at a time so the table has 15 rows.</p>
           <img src="img/Results.png" alt="Summary of Results" class="img-fluid">
           <hr id="modal-line">
-          <h4>What I Would Do Next</h4>
+          <h4 class="h4-middle">What I Would Do Next</h4>
           <p>An idea for a potential real-world project that could use this code is as follows:</p> 
           <p>A clothing company has created a new clothing line that was designed around the concept of social distancing. They want to use Twitter as their main platform of promotion and want to reach out to popular users who would be willing to partner with their company and promote the new line. This code can be a starting point to help the company be able to see which users have recently made tweets using the hashtag #socialdistancing and how popular those users are based on their number of followers.</p> 
           <p>If this project were real, the company could use the user’s id to look up their twitter profile and determine if they want to partner with them. They could also continue to add on to the table (exported data) in Excel. To improve this code, I would change it to be able to constantly update the number of followers real time and access to more of the API.</p>

@@ -366,8 +366,13 @@ img {
 }
 
 .normal-links:hover {
-  color: lightsteelblue;
+  color: blue;
   text-decoration: none;
+}
+
+.normal-links:after {
+    color: blue;
+    text-decoration: none;
 }
 
 ol {

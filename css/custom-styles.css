@@ -371,7 +371,7 @@ img {
 }
 
 .normal-links:after {
-    color: blue;
+    color: blue !important;
     text-decoration: none;
 }
 
